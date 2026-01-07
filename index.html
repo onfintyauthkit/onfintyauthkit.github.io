@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnFiNtY Auth Kit - Premium Flutter Authentication UI</title>
+    <meta name="description"
+        content="Complete production-ready Flutter authentication kit with 8 screens, 7 themes, multi-language support, and backend flexibility. Save 40+ hours.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="./dist/output.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-black text-white antialiased selection:bg-purple-500/30">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="orb w-[500px] h-[500px] bg-purple-600/30 -top-20 -left-20"></div>
+        <div class="orb w-[400px] h-[400px] bg-blue-600/30 top-1/2 right-0"></div>
+        <div class="orb w-[600px] h-[600px] bg-pink-600/20 bottom-0 left-1/3"></div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span
+                    class="font-display font-bold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">OnFiNtY</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="#showcase" class="hover:text-white transition-colors">Themes</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+            </div>
+
+            <a href="#pricing"
+                class="hidden sm:flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black hover:bg-gray-100 transition-all font-semibold text-sm">
+                Get the Kit
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left Content -->
+            <div class="space-y-8 relative z-10 text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold uppercase tracking-wide text-purple-300">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Production Ready, Flutter 3.10+
+                </div>
+
+                <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+                    Build beautiful<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-500">auth
+                        screens.</span>
+                </h1>
+
+                <p class="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Save <strong>40+ hours</strong> with production-ready Flutter authentication. 8 screens, 7 themes, 7
+                    languages, and works with any backend.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                    <a href="#pricing"
+                        class="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        Get the Kit - $49
+                    </a>
+                    <a href="#showcase"
+                        class="px-8 py-4 glass rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="play" class="w-5 h-5"></i>
+                        View Themes
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4 pt-6 text-sm text-gray-500">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i>
+                        <span>All Platforms</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i>
+                        <span>2000+ Lines of Docs</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i>
+                        <span>MIT License</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visuals (Interactive) -->
+            <div class="relative h-[600px] lg:h-[700px] flex items-center justify-center perspective-1000 hidden lg:flex"
+                id="hero-visuals">
+                <div class="relative w-[350px] h-[700px] transition-transform duration-100 ease-out"
+                    id="hero-tilt-container">
+
+                    <div
+                        class="hidden lg:block absolute top-12 -left-32 w-[280px] h-[580px] bg-black rounded-[40px] border-[6px] border-gray-800 shadow-2xl opacity-60 transform -rotate-6 scale-90 translate-z-[-50px]">
+                        <img src="screenshots/sunset.webp" class="w-full h-full object-cover rounded-[34px]"
+                            alt="Screen 2">
+                        <div class="absolute inset-0 bg-black/40 rounded-[34px]"></div>
+                    </div>
+
+                    <div
+                        class="hidden lg:block absolute top-24 -right-32 w-[280px] h-[580px] bg-black rounded-[40px] border-[6px] border-gray-800 shadow-2xl opacity-60 transform rotate-6 scale-90 translate-z-[-50px]">
+                        <img src="screenshots/login.png" class="w-full h-full object-cover rounded-[34px]"
+                            alt="Screen 3">
+                        <div class="absolute inset-0 bg-black/40 rounded-[34px]"></div>
+                    </div>
+
+                    <div
+                        class="absolute inset-0 w-full h-full bg-black rounded-[48px] border-[8px] border-gray-900 shadow-[0_50px_100px_rgba(0,0,0,0.5)] z-20 overflow-hidden">
+                        <div class="relative w-full h-full">
+                            <img id="hero-main-image" src="screenshots/midnight.png"
+                                class="w-full h-full object-cover transition-opacity duration-700" alt="Main Screen">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute top-1/2 -right-12 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl flex items-center gap-3 shadow-xl z-30 animate-bounce cursor-default"
+                        style="animation-duration: 3s;">
+                        <div
+                            class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                            <i data-lucide="check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Saved</p>
+                            <p class="font-bold">40+ Hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="py-16 px-4 border-y border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl lg:text-5xl font-bold text-purple-400 mb-2">8</div>
+                <div class="text-sm text-gray-400">Complete Screens</div>
+            </div>
+            <div>
+                <div class="text-4xl lg:text-5xl font-bold text-blue-400 mb-2">7</div>
+                <div class="text-sm text-gray-400">Premium Themes</div>
+            </div>
+            <div>
+                <div class="text-4xl lg:text-5xl font-bold text-pink-400 mb-2">7</div>
+                <div class="text-sm text-gray-400">Languages</div>
+            </div>
+            <div>
+                <div class="text-4xl lg:text-5xl font-bold text-green-400 mb-2">∞</div>
+                <div class="text-sm text-gray-400">Backend Options</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Features Section -->
+    <section id="features" class="py-24 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">Everything You Need</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">A complete, production-ready authentication
+                    experience. No corner-cutting, no missing pieces.</p>
+            </div>
+
+            <!-- 8 Screens -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-purple-300">✨ 8 Complete Authentication Screens</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4 text-purple-400">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Welcome Screen</h4>
+                        <p class="text-sm text-gray-400">Eye-catching entry point with customizable branding</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 text-blue-400">
+                            <i data-lucide="log-in" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Login Screen</h4>
+                        <p class="text-sm text-gray-400">Email/password + optional social auth</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4 text-green-400">
+                            <i data-lucide="user-plus" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Register Screen</h4>
+                        <p class="text-sm text-gray-400">With avatar upload and validation</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center mb-4 text-yellow-400">
+                            <i data-lucide="key" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Forgot Password</h4>
+                        <p class="text-sm text-gray-400">Password recovery flow</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center mb-4 text-pink-400">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">OTP Verification</h4>
+                        <p class="text-sm text-gray-400">Code verification UI with auto-focus</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center mb-4 text-red-400">
+                            <i data-lucide="lock" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Reset Password</h4>
+                        <p class="text-sm text-gray-400">New password setup with strength meter</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4 text-green-400">
+                            <i data-lucide="check-circle" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Success Screen</h4>
+                        <p class="text-sm text-gray-400">Contextual success messages</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center mb-4 text-red-400">
+                            <i data-lucide="alert-circle" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Error Screen</h4>
+                        <p class="text-sm text-gray-400">Beautiful error handling</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Features -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-blue-300">🎨 Premium Design System</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="palette" class="w-8 h-8 text-purple-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">7 Professional Themes</h4>
+                        <p class="text-sm text-gray-400 mb-3">Cosmic, Ocean, Nature, Sunset, Royal, Midnight, Minimal -
+                            switch with one line</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-blue-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Glassmorphism UI</h4>
+                        <p class="text-sm text-gray-400 mb-3">Modern frosted glass effects with perfect blur and
+                            transparency</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="wand-2" class="w-8 h-8 text-pink-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">3 Background Styles</h4>
+                        <p class="text-sm text-gray-400 mb-3">Mesh gradients, floating orbs, or geometric shapes</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="zap" class="w-8 h-8 text-yellow-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Smooth Animations</h4>
+                        <p class="text-sm text-gray-400 mb-3">Flutter Animate for buttery 60 FPS transitions</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-green-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Fully Responsive</h4>
+                        <p class="text-sm text-gray-400 mb-3">Perfect on mobile, tablet, and desktop/web</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="image" class="w-8 h-8 text-red-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Custom Logo Support</h4>
+                        <p class="text-sm text-gray-400 mb-3">Add your brand logo with customizable sizing per screen
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-Language -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-green-300">🌍 Multi-Language Support</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-8 glass rounded-2xl">
+                        <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+                            <i data-lucide="languages" class="w-6 h-6 text-green-400"></i>
+                            7 Built-in Languages
+                        </h4>
+                        <div class="grid grid-cols-2 gap-3 text-sm">
+                            <div class="flex items-center gap-2">
+                                <span>🇬🇧</span> English
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>🇸🇦</span> Arabic (RTL)
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>🇪🇸</span> Spanish
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>🇫🇷</span> French
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>🇨🇳</span> Chinese
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>🇮🇳</span> Hindi
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>🇩🇪</span> German
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 glass rounded-2xl">
+                        <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+                            <i data-lucide="plus-circle" class="w-6 h-6 text-green-400"></i>
+                            Easy to Extend
+                        </h4>
+                        <p class="text-gray-400 mb-3">Simple map-based localization system - no ARB files, no code
+                            generation!</p>
+                        <p class="text-sm text-gray-500">Add a new language in just minutes by editing one file.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Flexibility -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-yellow-300">🔌 Backend Agnostic Architecture</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="p-6 bg-gradient-to-b from-orange-500/10 to-transparent border border-orange-500/20 rounded-2xl">
+                        <div class="text-3xl mb-3">🔥</div>
+                        <h4 class="font-bold mb-2">Firebase</h4>
+                        <p class="text-sm text-gray-400">Complete example included</p>
+                    </div>
+
+                    <div
+                        class="p-6 bg-gradient-to-b from-green-500/10 to-transparent border border-green-500/20 rounded-2xl">
+                        <div class="text-3xl mb-3">💚</div>
+                        <h4 class="font-bold mb-2">Supabase</h4>
+                        <p class="text-sm text-gray-400">Production-ready implementation</p>
+                    </div>
+
+                    <div
+                        class="p-6 bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/20 rounded-2xl">
+                        <div class="text-3xl mb-3">🌐</div>
+                        <h4 class="font-bold mb-2">REST API</h4>
+                        <p class="text-sm text-gray-400">Custom backend template</p>
+                    </div>
+
+                    <div
+                        class="p-6 bg-gradient-to-b from-purple-500/10 to-transparent border border-purple-500/20 rounded-2xl">
+                        <div class="text-3xl mb-3">🎯</div>
+                        <h4 class="font-bold mb-2">Mock Backend</h4>
+                        <p class="text-sm text-gray-400">Testing without backend</p>
+                    </div>
+                </div>
+                <div class="mt-8 p-6 glass rounded-2xl">
+                    <p class="text-gray-300 mb-3"><strong>Swap backends anytime</strong> without touching UI code. All
+                        interaction goes through a simple <code
+                            class="px-2 py-1 bg-white/10 rounded text-sm">AuthInterface</code>.</p>
+                    <p class="text-sm text-gray-500">Full examples with copy-paste ready code for Firebase, Supabase,
+                        and REST API included.</p>
+                </div>
+            </div>
+
+            <!-- Production Features -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-pink-300">🚀 Production-Ready Features</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-pink-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Form Validation</h4>
+                        <p class="text-sm text-gray-400">Real-time and on-submit validation with error messages</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="gauge" class="w-8 h-8 text-blue-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Password Strength Meter</h4>
+                        <p class="text-sm text-gray-400">Visual feedback for password security</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="alert-triangle" class="w-8 h-8 text-yellow-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Error Handling</h4>
+                        <p class="text-sm text-gray-400">Comprehensive error dialogs and messages</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="save" class="w-8 h-8 text-green-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Session Persistence</h4>
+                        <p class="text-sm text-gray-400">AuthWrapper auto-redirects logged-in users</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="image-plus" class="w-8 h-8 text-purple-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Avatar Upload</h4>
+                        <p class="text-sm text-gray-400">Integrated image picker with backend upload</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="route" class="w-8 h-8 text-orange-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Go Router Integration</h4>
+                        <p class="text-sm text-gray-400">Modern declarative routing built-in</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="accessibility" class="w-8 h-8 text-blue-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Accessibility Support</h4>
+                        <p class="text-sm text-gray-400">Screen reader support and semantic labels</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="share-2" class="w-8 h-8 text-red-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Social Auth Ready</h4>
+                        <p class="text-sm text-gray-400">Google, Facebook, Apple Sign-In interfaces</p>
+                    </div>
+
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-pink-500/50 transition-all">
+                        <i data-lucide="settings" class="w-8 h-8 text-gray-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Customizable Config</h4>
+                        <p class="text-sm text-gray-400">Single file for all customization options</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's Included -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-cyan-300">📦 What's in the Package</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-8 glass rounded-2xl">
+                        <i data-lucide="code-2" class="w-10 h-10 text-cyan-400 mb-6"></i>
+                        <h4 class="font-bold text-lg mb-3">Complete Source Code</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Clean, well-structured Dart code</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Comprehensive inline comments</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>All 8 screens + reusable widgets</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Backend implementation examples</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 glass rounded-2xl">
+                        <i data-lucide="book-open" class="w-10 h-10 text-blue-400 mb-6"></i>
+                        <h4 class="font-bold text-lg mb-3">2000+ Lines of Documentation</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Step-by-step setup guides</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Complete backend integration tutorials</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Customization examples</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Troubleshooting and best practices</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Slider -->
+    <section id="showcase" class="py-24 overflow-hidden relative bg-black/30">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex items-end justify-between">
+            <div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">Stunning <span
+                        class="text-purple-400">Themes</span></h2>
+                <p class="text-gray-400 text-lg">Swipe through professionally designed themes. Let the design speak for
+                    itself.</p>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="hidden md:flex gap-3">
+                <button id="slide-prev"
+                    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button id="slide-next"
+                    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Slider Container -->
+        <div id="slider-container"
+            class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-8 px-6 pb-12 w-full">
+
+            <div
+                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
+                <img src="screenshots/cosmic.webp"
+                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
+                <div class="absolute bottom-8 left-8 z-20">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purple-400 mb-2 block">Cosmic</span>
+                    <h4 class="text-2xl font-display font-bold">Purple Nebula</h4>
+                </div>
+            </div>
+
+            <div
+                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
+                <img src="screenshots/ocean.webp"
+                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
+                <div class="absolute bottom-8 left-8 z-20">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-2 block">Ocean</span>
+                    <h4 class="text-2xl font-display font-bold">Deep Blue</h4>
+                </div>
+            </div>
+
+            <div
+                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
+                <img src="screenshots/nature.webp"
+                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
+                <div class="absolute bottom-8 left-8 z-20">
+                    <span class="text-xs font-bold uppercase tracking-wider text-green-400 mb-2 block">Nature</span>
+                    <h4 class="text-2xl font-display font-bold">Forest Green</h4>
+                </div>
+            </div>
+
+            <div
+                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
+                <img src="screenshots/sunset.webp"
+                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
+                <div class="absolute bottom-8 left-8 z-20">
+                    <span class="text-xs font-bold uppercase tracking-wider text-orange-400 mb-2 block">Sunset</span>
+                    <h4 class="text-2xl font-display font-bold">Warm Glow</h4>
+                </div>
+            </div>
+
+            <div
+                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
+                <img src="screenshots/royal.webp"
+                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
+                <div class="absolute bottom-8 left-8 z-20">
+                    <span class="text-xs font-bold uppercase tracking-wider text-yellow-400 mb-2 block">Royal</span>
+                    <h4 class="text-2xl font-display font-bold">Black Gold</h4>
+                </div>
+            </div>
+
+            <div
+                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
+                <img src="screenshots/midnight.png"
+                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
+                <div class="absolute bottom-8 left-8 z-20">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-2 block">Midnight</span>
+                    <h4 class="text-2xl font-display font-bold">Dark Mystery</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold mb-4">Why OnFiNtY?</h2>
+                <p class="text-gray-400 text-lg">Stop reinventing the wheel. Ship faster.</p>
+            </div>
+
+            <div class="overflow-x-auto rounded-3xl border border-white/10">
+                <table class="w-full text-left bg-black/50 backdrop-blur-md min-w-[600px]">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="p-6 font-display text-lg">Feature</th>
+                            <th class="p-6 font-display text-lg text-purple-400">OnFiNtY</th>
+                            <th class="p-6 font-display text-lg text-gray-500">Basic Kits / DIY</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Design Quality</td>
+                            <td class="p-6 text-white">💎 Premium Glassmorphism</td>
+                            <td class="p-6 text-gray-500">Basic / Flat</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Complete Screens</td>
+                            <td class="p-6 text-white">✅ 8 Screens</td>
+                            <td class="p-6 text-gray-500">2-3 Screens</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Themes</td>
+                            <td class="p-6 text-white">🎨 7 Ready Themes</td>
+                            <td class="p-6 text-gray-500">1 Default</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Multi-Language</td>
+                            <td class="p-6 text-white">🌍 7 Languages (+ Easy to Add)</td>
+                            <td class="p-6 text-gray-500">English Only</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Backend Support</td>
+                            <td class="p-6 text-white">🔌 Any Backend (Pluggable)</td>
+                            <td class="p-6 text-gray-500">Locked to One</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Documentation</td>
+                            <td class="p-6 text-white">📚 2000+ Lines</td>
+                            <td class="p-6 text-gray-500">Minimal README</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Avatar Upload</td>
+                            <td class="p-6 text-white">✅ Built-in</td>
+                            <td class="p-6 text-gray-500">❌ Not Included</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Session Persistence</td>
+                            <td class="p-6 text-white">✅ AuthWrapper</td>
+                            <td class="p-6 text-gray-500">❌ DIY</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 font-medium">Time Saved</td>
+                            <td class="p-6 text-white font-bold">⏱️ 40+ Hours</td>
+                            <td class="p-6 text-gray-500">0 Hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="pricing" class="py-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto relative group">
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-1000">
+            </div>
+
+            <h2 class="relative text-5xl lg:text-7xl font-bold mb-8 font-display">
+                Ready to Ship?
+            </h2>
+            <p class="relative text-xl text-gray-400 mb-4">
+                Get the complete source code, documentation, and lifetime updates.
+            </p>
+            <p class="relative text-sm text-gray-500 mb-10">
+                One-time payment. MIT License. Use in unlimited projects.
+            </p>
+
+            <button
+                class="relative px-12 py-5 bg-white text-black rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.4)]">
+                Buy Now for $49
+            </button>
+
+            <p class="relative mt-8 text-sm text-gray-600">Instant download • Lifetime updates • Email support</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-gray-600 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-6">
+                <span class="font-display font-bold text-xl text-white">OnFiNtY</span>
+            </div>
+            <p class="text-sm mb-4">© 2026 OnFiNtY. All rights reserved. Made with 💜</p>
+            <div class="flex justify-center gap-6 text-sm">
+                <a href="#" class="hover:text-white transition-colors">Documentation</a>
+                <a href="#" class="hover:text-white transition-colors">MIT License</a>
+                <a href="mailto:onfinty@gmail.com" class="hover:text-white transition-colors">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
