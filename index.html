@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnFiNtY Auth Kit - Premium Flutter Authentication UI</title>
+    <title>OnFiNtY Auth Kit - Premium Flutter Authentication UI | GoRouter, Supabase & MIT License</title>
     <meta name="description"
-        content="Complete production-ready Flutter authentication kit with 8 screens, 7 themes, multi-language support, and backend flexibility. Save 40+ hours.">
+        content="Complete production-ready Flutter authentication kit with 8 screens, 7 themes, multi-language support (RTL), and backend flexibility (Supabase, Firebase, REST). Save 40+ hours.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
 
     <!-- Nav -->
     <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-white/5" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between nav-inner">
             <div class="flex items-center gap-2">
                 <span
                     class="font-display font-bold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">OnFiNtY</span>
@@ -41,151 +41,431 @@
 
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
                 <a href="#features" class="hover:text-white transition-colors">Features</a>
-                <a href="#showcase" class="hover:text-white transition-colors">Themes</a>
+                <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+                <a href="#setup" class="hover:text-white transition-colors">Setup</a>
                 <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
             </div>
 
             <a href="#pricing"
-                class="hidden sm:flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black hover:bg-gray-100 transition-all font-semibold text-sm">
-                Get the Kit
+                class="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-white text-black hover:bg-gray-100 transition-all font-semibold text-xs sm:text-sm shadow-lg hover:shadow-xl hover:scale-105">
+                <span class="hidden sm:inline">Buy Now - </span>$77
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <!-- EPIC FULL-SCREEN HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero">
+        <!-- Animated Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-blue-900/40"></div>
 
-            <!-- Left Content -->
-            <div class="space-y-8 relative z-10 text-center lg:text-left">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold uppercase tracking-wide text-purple-300">
-                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                    Production Ready, Flutter 3.10+
+        <!-- Floating Particles -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none" id="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- Glowing Orbs -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/30 rounded-full blur-[100px] animate-pulse"
+            style="animation-delay: 1s;"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[120px]">
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+                <!-- Left: Text Content -->
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/40 text-xs font-bold uppercase tracking-wider text-purple-300 mb-6 animate-pulse">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+                        <span>Premium Flutter UI Kit</span>
+                    </div>
+
+                    <h1
+                        class="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] sm:leading-[0.9] tracking-tight mb-6">
+                        <span class="block text-white">Build</span>
+                        <span
+                            class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 animate-gradient">Stunning</span>
+                        <span class="block text-white">Auth</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8">
+                        <strong class="text-white">117,649</strong> combinations. <strong class="text-purple-400">8
+                            screens</strong>.
+                        <strong class="text-pink-400">14 themes</strong>. <strong class="text-cyan-400">7
+                            languages</strong>.
+                        One kit to rule them all.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <a href="#pricing"
+                            class="group relative px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 bg-[length:200%_100%] text-white rounded-full font-bold text-lg transition-all duration-500 hover:bg-[position:100%_0] hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] flex items-center justify-center gap-2">
+                            <span>Get It Now</span>
+                            <span class="px-2 py-0.5 bg-white/20 rounded-full text-sm">$77</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#gallery"
+                            class="px-8 py-4 glass border border-white/20 rounded-full font-bold text-lg hover:bg-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-2 group">
+                            <i data-lucide="play" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                            <span>See It Live</span>
+                        </a>
+                    </div>
+
                 </div>
 
-                <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                    Build beautiful<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-500">auth
-                        screens.</span>
-                </h1>
+                <!-- Right: Epic Phone Showcase - Creative Mobile-First Design -->
+                <div class="order-1 lg:order-2 relative" id="phone-showcase">
+                    <div class="relative flex items-center justify-center h-[420px] sm:h-[580px] lg:h-[700px]">
 
-                <p class="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                    Save <strong>40+ hours</strong> with production-ready Flutter authentication. 8 screens, 7 themes, 7
-                    languages, and works with any backend.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                    <a href="#pricing"
-                        class="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        Get the Kit - $49
-                    </a>
-                    <a href="#showcase"
-                        class="px-8 py-4 glass rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-                        <i data-lucide="play" class="w-5 h-5"></i>
-                        View Themes
-                    </a>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-4 pt-6 text-sm text-gray-500">
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i>
-                        <span>All Platforms</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i>
-                        <span>2000+ Lines of Docs</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i>
-                        <span>MIT License</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Visuals (Interactive) -->
-            <div class="relative h-[600px] lg:h-[700px] flex items-center justify-center perspective-1000 hidden lg:flex"
-                id="hero-visuals">
-                <div class="relative w-[350px] h-[700px] transition-transform duration-100 ease-out"
-                    id="hero-tilt-container">
-
-                    <div
-                        class="hidden lg:block absolute top-12 -left-32 w-[280px] h-[580px] bg-black rounded-[40px] border-[6px] border-gray-800 shadow-2xl opacity-60 transform -rotate-6 scale-90 translate-z-[-50px]">
-                        <img src="screenshots/sunset.webp" class="w-full h-full object-cover rounded-[34px]"
-                            alt="Screen 2">
-                        <div class="absolute inset-0 bg-black/40 rounded-[34px]"></div>
-                    </div>
-
-                    <div
-                        class="hidden lg:block absolute top-24 -right-32 w-[280px] h-[580px] bg-black rounded-[40px] border-[6px] border-gray-800 shadow-2xl opacity-60 transform rotate-6 scale-90 translate-z-[-50px]">
-                        <img src="screenshots/login.png" class="w-full h-full object-cover rounded-[34px]"
-                            alt="Screen 3">
-                        <div class="absolute inset-0 bg-black/40 rounded-[34px]"></div>
-                    </div>
-
-                    <div
-                        class="absolute inset-0 w-full h-full bg-black rounded-[48px] border-[8px] border-gray-900 shadow-[0_50px_100px_rgba(0,0,0,0.5)] z-20 overflow-hidden">
-                        <div class="relative w-full h-full">
-                            <img id="hero-main-image" src="screenshots/midnight.png"
-                                class="w-full h-full object-cover transition-opacity duration-700" alt="Main Screen">
+                        <!-- Animated Background Rings -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <div
-                                class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none">
+                                class="w-[280px] sm:w-[400px] lg:w-[500px] h-[280px] sm:h-[400px] lg:h-[500px] rounded-full border border-purple-500/20 animate-spin-slow">
+                            </div>
+                            <div
+                                class="absolute w-[340px] sm:w-[480px] lg:w-[600px] h-[340px] sm:h-[480px] lg:h-[600px] rounded-full border border-pink-500/10 animate-spin-slow-reverse">
+                            </div>
+                        </div>
+
+                        <!-- Background Glow -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-cyan-500/30 blur-[80px] rounded-full scale-50 opacity-60">
+                        </div>
+
+                        <!-- Left Phone (Hidden on Mobile, Visible on Desktop) -->
+                        <div class="absolute left-0 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 w-[140px] sm:w-[180px] lg:w-[220px] transform -rotate-12 opacity-60 hover:opacity-90 transition-all duration-500 hover:scale-105 z-10 hidden lg:block"
+                            id="phone-left">
+                            <div
+                                class="relative bg-gray-900 rounded-[24px] sm:rounded-[32px] p-1.5 sm:p-2 shadow-2xl border border-gray-800">
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-16 sm:w-20 h-4 sm:h-5 bg-gray-900 rounded-b-xl z-20">
+                                </div>
+                                <img src="screenshots/welcome-cosmic-split-nebula-en.webp" alt="Welcome Screen"
+                                    class="w-full rounded-[20px] sm:rounded-[28px]" id="phone-left-img">
+                            </div>
+                        </div>
+
+                        <!-- Center Phone (Main - Hero) -->
+                        <div class="relative z-30 w-[220px] sm:w-[260px] lg:w-[300px] transform hover:scale-105 transition-all duration-500"
+                            id="phone-center">
+                            <!-- Glowing Ring Behind Phone -->
+                            <div
+                                class="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-purple-500/40 via-pink-500/40 to-cyan-500/40 rounded-[50px] blur-xl opacity-70 animate-pulse">
+                            </div>
+
+                            <div
+                                class="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-[36px] sm:rounded-[44px] lg:rounded-[48px] p-2.5 sm:p-3 lg:p-3 shadow-[0_0_100px_rgba(168,85,247,0.4)] border border-gray-700">
+                                <!-- Notch -->
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 lg:w-28 h-6 sm:h-7 lg:h-7 bg-gray-900 rounded-b-2xl z-20">
+                                </div>
+                                <img src="screenshots/login-midnight-hero-galactic-en.webp" alt="Login Screen"
+                                    class="w-full rounded-[30px] sm:rounded-[38px] lg:rounded-[42px] transition-opacity duration-700"
+                                    id="phone-center-img">
+                                <!-- Reflection -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent rounded-[36px] sm:rounded-[44px] lg:rounded-[48px] pointer-events-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Phone (Hidden on Mobile, Visible on Desktop) -->
+                        <div class="absolute right-0 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 w-[140px] sm:w-[180px] lg:w-[220px] transform rotate-12 opacity-60 hover:opacity-90 transition-all duration-500 hover:scale-105 z-10 hidden lg:block"
+                            id="phone-right">
+                            <div
+                                class="relative bg-gray-900 rounded-[24px] sm:rounded-[32px] p-1.5 sm:p-2 shadow-2xl border border-gray-800">
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-16 sm:w-20 h-4 sm:h-5 bg-gray-900 rounded-b-xl z-20">
+                                </div>
+                                <img src="screenshots/register-sunset-heroAuth-geometric-zh.webp" alt="Register Screen"
+                                    class="w-full rounded-[20px] sm:rounded-[28px]" id="phone-right-img">
+                            </div>
+                        </div>
+
+                        <!-- Floating Orbital Badges (Visible on all screens) -->
+
+
+                    </div>
+
+                    <!-- Left Badge - Languages -->
+                    <div class="absolute left-0 sm:left-4 top-1/3 glass px-3 py-2 rounded-xl border border-cyan-500/30 z-40 animate-float shadow-lg shadow-cyan-500/20 lg:hidden"
+                        style="animation-delay: 0.5s;">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl">🌍</span>
+                            <div>
+                                <p class="text-xs text-gray-400">Languages</p>
+                                <p class="text-sm font-bold text-cyan-400">7+ RTL</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="absolute top-1/2 -right-12 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl flex items-center gap-3 shadow-xl z-30 animate-bounce cursor-default"
-                        style="animation-duration: 3s;">
-                        <div
-                            class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
-                            <i data-lucide="check" class="w-6 h-6"></i>
+                    <!-- Right Badge - Screens -->
+                    <div class="absolute right-0 sm:right-4 top-1/3 glass px-3 py-2 rounded-xl border border-pink-500/30 z-40 animate-float shadow-lg shadow-pink-500/20 lg:hidden"
+                        style="animation-delay: 1s;">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl">📱</span>
+                            <div>
+                                <p class="text-xs text-gray-400">Screens</p>
+                                <p class="text-sm font-bold text-pink-400">8 Complete</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-xs text-gray-400">Saved</p>
-                            <p class="font-bold">40+ Hours</p>
+                    </div>
+
+                    <!-- Bottom Left Badge - Hours Saved -->
+                    <div class="absolute bottom-16 sm:bottom-12 left-2 sm:left-8 glass px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-green-500/30 z-40 animate-float shadow-lg shadow-green-500/20 lg:hidden"
+                        style="animation-delay: 0.8s;">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                                <i data-lucide="zap" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Save</p>
+                                <p class="text-sm font-bold text-green-400">165+ Hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Right Badge - License -->
+                    <div class="absolute bottom-16 sm:bottom-12 right-2 sm:right-8 glass px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-blue-500/30 z-40 animate-float shadow-lg shadow-blue-500/20 lg:hidden"
+                        style="animation-delay: 1.3s;">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">License</p>
+                                <p class="text-sm font-bold text-blue-400">MIT</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Desktop Only Badges -->
+                    <div
+                        class="absolute top-8 right-4 sm:right-12 glass px-4 py-3 rounded-xl border border-white/10 animate-float z-40 hidden lg:block">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Secure</p>
+                                <p class="text-sm font-bold">MIT License</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-8 left-4 sm:left-12 glass px-4 py-3 rounded-xl border border-white/10 animate-float z-40 hidden lg:block"
+                        style="animation-delay: 1s;">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                                <i data-lucide="zap" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Saved</p>
+                                <p class="text-sm font-bold">165+ Hours</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+            class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 animate-bounce z-20">
+            <span class="text-xs uppercase tracking-widest">Scroll</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+        </div>
     </section>
 
-    <!-- Quick Stats -->
-    <section class="py-16 px-4 border-y border-white/5">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-4xl lg:text-5xl font-bold text-purple-400 mb-2">8</div>
-                <div class="text-sm text-gray-400">Complete Screens</div>
+    <!-- THE KIT'S SIGNATURE - Visual Grid -->
+    <section class="py-24 px-4 sm:px-6 relative overflow-hidden" id="signature">
+        <div class="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-pink-900/10"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+                    The <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">Kit's
+                        Signature</span>
+                </h2>
+                <p class="text-xl text-gray-400">Everything you need, perfectly configurable</p>
             </div>
-            <div>
-                <div class="text-4xl lg:text-5xl font-bold text-blue-400 mb-2">7</div>
-                <div class="text-sm text-gray-400">Premium Themes</div>
+
+            <!-- Visual Grid - Bento Style -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+                <!-- 7 Light Themes -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 p-6 hover:border-yellow-500/50 transition-all duration-500 hover:scale-[1.02]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white shadow-lg shadow-yellow-500/25">
+                            <i data-lucide="sun" class="w-7 h-7"></i>
+                        </div>
+                        <div class="text-4xl font-black text-yellow-400 mb-1">7</div>
+                        <div class="text-sm text-gray-400 font-medium">Light Themes</div>
+                        <div class="flex gap-1 mt-3">
+                            <span class="w-4 h-4 rounded-full bg-purple-400 ring-2 ring-black"></span>
+                            <span class="w-4 h-4 rounded-full bg-blue-400 ring-2 ring-black"></span>
+                            <span class="w-4 h-4 rounded-full bg-green-400 ring-2 ring-black"></span>
+                            <span class="w-4 h-4 rounded-full bg-orange-400 ring-2 ring-black"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 Dark Themes -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 p-6 hover:border-indigo-500/50 transition-all duration-500 hover:scale-[1.02]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25">
+                            <i data-lucide="moon" class="w-7 h-7"></i>
+                        </div>
+                        <div class="text-4xl font-black text-indigo-400 mb-1">7</div>
+                        <div class="text-sm text-gray-400 font-medium">Dark Themes</div>
+                        <div class="flex gap-1 mt-3">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 ring-2 ring-black"></span>
+                            <span class="w-4 h-4 rounded-full bg-blue-600 ring-2 ring-black"></span>
+                            <span class="w-4 h-4 rounded-full bg-green-600 ring-2 ring-black"></span>
+                            <span class="w-4 h-4 rounded-full bg-indigo-600 ring-2 ring-black"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 Welcome Layouts -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 p-6 hover:border-green-500/50 transition-all duration-500 hover:scale-[1.02]">
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center text-white shadow-lg shadow-green-500/25">
+                            <i data-lucide="home" class="w-7 h-7"></i>
+                        </div>
+                        <div class="text-4xl font-black text-green-400 mb-1">7</div>
+                        <div class="text-sm text-gray-400 font-medium">Welcome Layouts</div>
+                    </div>
+                </div>
+
+                <!-- 7 Login Layouts -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 p-6 hover:border-blue-500/50 transition-all duration-500 hover:scale-[1.02]">
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/25">
+                            <i data-lucide="log-in" class="w-7 h-7"></i>
+                        </div>
+                        <div class="text-4xl font-black text-blue-400 mb-1">7</div>
+                        <div class="text-sm text-gray-400 font-medium">Login Layouts</div>
+                    </div>
+                </div>
+
+                <!-- 7 Register Layouts -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 p-6 hover:border-pink-500/50 transition-all duration-500 hover:scale-[1.02]">
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-pink-400 to-rose-600 flex items-center justify-center text-white shadow-lg shadow-pink-500/25">
+                            <i data-lucide="user-plus" class="w-7 h-7"></i>
+                        </div>
+                        <div class="text-4xl font-black text-pink-400 mb-1">7</div>
+                        <div class="text-sm text-gray-400 font-medium">Register Layouts</div>
+                    </div>
+                </div>
+
+                <!-- 7 Backgrounds -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-500/10 to-violet-500/10 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all duration-500 hover:scale-[1.02]">
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-purple-400 to-violet-600 flex items-center justify-center text-white shadow-lg shadow-purple-500/25">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <div class="text-4xl font-black text-purple-400 mb-1">7</div>
+                        <div class="text-sm text-gray-400 font-medium">Background Engines</div>
+                    </div>
+                </div>
+
+                <!-- 7 Languages -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-500/10 to-teal-500/10 border border-cyan-500/20 p-6 hover:border-cyan-500/50 transition-all duration-500 hover:scale-[1.02]">
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-cyan-400 to-teal-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/25">
+                            <i data-lucide="globe" class="w-7 h-7"></i>
+                        </div>
+                        <div class="text-4xl font-black text-cyan-400 mb-1">7</div>
+                        <div class="text-sm text-gray-400 font-medium">Languages + RTL</div>
+                    </div>
+                </div>
+
+                <!-- Price Card -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-cyan-500/20 border border-purple-500/30 p-6 hover:border-purple-500/60 transition-all duration-500 hover:scale-[1.02]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-cyan-500/10 animate-gradient">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-purple-500/25 animate-pulse">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <div
+                            class="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mb-1">
+                            $77</div>
+                        <div class="text-sm text-gray-400 font-medium">One-Time Forever</div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <div class="text-4xl lg:text-5xl font-bold text-pink-400 mb-2">7</div>
-                <div class="text-sm text-gray-400">Languages</div>
-            </div>
-            <div>
-                <div class="text-4xl lg:text-5xl font-bold text-green-400 mb-2">∞</div>
-                <div class="text-sm text-gray-400">Backend Options</div>
+
+            <!-- Combinations Counter -->
+            <div class="mt-12 text-center">
+                <div
+                    class="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 border border-white/10">
+                    <i data-lucide="infinity" class="w-6 h-6 text-purple-400"></i>
+                    <span class="text-lg"><span
+                            class="font-black text-3xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+                            id="combo-counter">0</span> Unique Combinations</span>
+                </div>
             </div>
         </div>
     </section>
 
+
+
     <!-- Complete Features Section -->
     <section id="features" class="py-24 px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 fade-up">
                 <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">Everything You Need</h2>
                 <p class="text-gray-400 text-lg max-w-2xl mx-auto">A complete, production-ready authentication
                     experience. No corner-cutting, no missing pieces.</p>
             </div>
 
             <!-- 8 Screens -->
-            <div class="mb-20">
+            <div class="mb-20 fade-up">
                 <h3 class="text-2xl font-bold mb-8 text-purple-300">✨ 8 Complete Authentication Screens</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
                     <div class="glass-card p-6 rounded-2xl">
                         <div
                             class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4 text-purple-400">
@@ -261,9 +541,9 @@
             </div>
 
             <!-- Design Features -->
-            <div class="mb-20">
+            <div class="mb-20 fade-up">
                 <h3 class="text-2xl font-bold mb-8 text-blue-300">🎨 Premium Design System</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
                     <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
                         <i data-lucide="palette" class="w-8 h-8 text-purple-400 mb-4"></i>
                         <h4 class="font-bold mb-2">7 Professional Themes</h4>
@@ -280,14 +560,17 @@
 
                     <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
                         <i data-lucide="wand-2" class="w-8 h-8 text-pink-400 mb-4"></i>
-                        <h4 class="font-bold mb-2">3 Background Styles</h4>
-                        <p class="text-sm text-gray-400 mb-3">Mesh gradients, floating orbs, or geometric shapes</p>
+                        <h4 class="font-bold mb-2">7 Animated Backgrounds</h4>
+                        <p class="text-sm text-gray-400 mb-3">Mesh, Orbs, Geometric, Galactic, Particles, Nebula, Grid
+                        </p>
                     </div>
 
                     <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
                         <i data-lucide="zap" class="w-8 h-8 text-yellow-400 mb-4"></i>
                         <h4 class="font-bold mb-2">Smooth Animations</h4>
                         <p class="text-sm text-gray-400 mb-3">Flutter Animate for buttery 60 FPS transitions</p>
+                        <p class="text-xs text-green-400 font-medium">Performance-aware: auto downgrade on low-end
+                            devices</p>
                     </div>
 
                     <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
@@ -302,11 +585,49 @@
                         <p class="text-sm text-gray-400 mb-3">Add your brand logo with customizable sizing per screen
                         </p>
                     </div>
+
+                    <!-- NEW: Backend Agnostic -->
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="plug-zap" class="w-8 h-8 text-orange-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Backend Agnostic</h4>
+                        <p class="text-sm text-gray-400 mb-3">Works with Firebase, Supabase, REST API, or any custom
+                            backend</p>
+                    </div>
+
+                    <!-- NEW: Session Persistence -->
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="lock-keyhole" class="w-8 h-8 text-cyan-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Session Persistence</h4>
+                        <p class="text-sm text-gray-400 mb-3">Built-in AuthWrapper handles login state automatically</p>
+                    </div>
+
+                    <!-- NEW: WCAG Accessibility -->
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="accessibility" class="w-8 h-8 text-indigo-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">WCAG Accessible</h4>
+                        <p class="text-sm text-gray-400 mb-3">Semantic headers, live regions, configurable touch targets
+                        </p>
+                    </div>
+
+                    <!-- NEW: Keyboard Navigation -->
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="keyboard" class="w-8 h-8 text-emerald-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Keyboard Navigation</h4>
+                        <p class="text-sm text-gray-400 mb-3">Next/Done focus traversal for efficient data entry</p>
+                    </div>
+
+                    <!-- NEW: Social Login -->
+                    <div class="p-6 border border-white/10 rounded-2xl hover:border-purple-500/50 transition-all">
+                        <i data-lucide="users" class="w-8 h-8 text-blue-400 mb-4"></i>
+                        <h4 class="font-bold mb-2">Full Social Login</h4>
+                        <p class="text-sm text-gray-400 mb-3">Google, Apple, and Facebook. Production-ready
+                            implementations.</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Multi-Language -->
-            <div class="mb-20">
+            <div class="mb-20 fade-up">
                 <h3 class="text-2xl font-bold mb-8 text-green-300">🌍 Multi-Language Support</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="p-8 glass rounded-2xl">
@@ -352,7 +673,7 @@
             </div>
 
             <!-- Backend Flexibility -->
-            <div class="mb-20">
+            <div class="mb-20 fade-up">
                 <h3 class="text-2xl font-bold mb-8 text-yellow-300">🔌 Backend Agnostic Architecture</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div
@@ -506,207 +827,1273 @@
         </div>
     </section>
 
-    <!-- Showcase Slider -->
-    <section id="showcase" class="py-24 overflow-hidden relative bg-black/30">
-        <div class="max-w-7xl mx-auto px-6 mb-12 flex items-end justify-between">
-            <div>
-                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">Stunning <span
-                        class="text-purple-400">Themes</span></h2>
-                <p class="text-gray-400 text-lg">Swipe through professionally designed themes. Let the design speak for
-                    itself.</p>
-            </div>
 
-            <!-- Slider Controls -->
-            <div class="hidden md:flex gap-3">
-                <button id="slide-prev"
-                    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                </button>
-                <button id="slide-next"
-                    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                </button>
-            </div>
+
+
+
+
+    <!-- Why OnFiNtY? - Premium Merged Comparison + Time Savings -->
+    <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent"></div>
+        <div
+            class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-green-500/8 rounded-full blur-[100px] pointer-events-none">
         </div>
 
-        <!-- Slider Container -->
-        <div id="slider-container"
-            class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-8 px-6 pb-12 w-full">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-display text-4xl lg:text-6xl font-bold mb-4">
+                    Why <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">OnFiNtY</span>?
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Stop reinventing the wheel. Here's what you get vs.
+                    building from scratch.</p>
+            </div>
 
-            <div
-                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
-                <img src="screenshots/cosmic.webp"
-                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
-                <div class="absolute bottom-8 left-8 z-20">
-                    <span class="text-xs font-bold uppercase tracking-wider text-purple-400 mb-2 block">Cosmic</span>
-                    <h4 class="text-2xl font-display font-bold">Purple Nebula</h4>
+            <!-- Stats Bar -->
+            <div class="flex flex-wrap justify-center gap-6 sm:gap-12 mb-16 fade-up">
+                <div class="text-center">
+                    <div class="text-4xl lg:text-5xl font-bold text-green-400 mb-1">165+</div>
+                    <div class="text-sm text-gray-400">Hours Saved</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl lg:text-5xl font-bold text-purple-400 mb-1">4+</div>
+                    <div class="text-sm text-gray-400">Weeks of Work</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl lg:text-5xl font-bold text-pink-400 mb-1">$8k+</div>
+                    <div class="text-sm text-gray-400">Dev Cost Saved</div>
                 </div>
             </div>
 
-            <div
-                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
-                <img src="screenshots/ocean.webp"
-                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
-                <div class="absolute bottom-8 left-8 z-20">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-2 block">Ocean</span>
-                    <h4 class="text-2xl font-display font-bold">Deep Blue</h4>
+            <!-- Premium Comparison Table -->
+            <div class="scale-in">
+                <div
+                    class="overflow-hidden rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl shadow-purple-500/10">
+                    <!-- Table Header -->
+                    <div
+                        class="grid grid-cols-12 bg-gradient-to-r from-purple-500/20 via-black/50 to-green-500/20 p-6 border-b border-white/10">
+                        <div
+                            class="col-span-5 sm:col-span-6 font-display text-lg font-bold text-white flex items-center gap-3">
+                            <i data-lucide="layers" class="w-5 h-5 text-purple-400"></i>
+                            Feature
+                        </div>
+                        <div class="col-span-4 sm:col-span-3 text-center font-display font-bold text-gray-400">DIY</div>
+                        <div
+                            class="col-span-3 text-center font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                            OnFiNtY</div>
+                    </div>
+
+                    <!-- Rows with alternating styles -->
+                    <div class="divide-y divide-white/5">
+                        <!-- Row 1 -->
+                        <div class="grid grid-cols-12 p-5 hover:bg-white/5 transition-all duration-300 group">
+                            <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="layout" class="w-5 h-5 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-white">8 Complete Screens</span>
+                                    <span class="hidden sm:block text-xs text-gray-500">Login, Register, OTP,
+                                        etc.</span>
+                                </div>
+                            </div>
+                            <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-gray-500 line-through">40+ hours</span>
+                            </div>
+                            <div class="col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-white font-bold">✅ Included</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="grid grid-cols-12 p-5 hover:bg-white/5 transition-all duration-300 group">
+                            <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="sparkles" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-white">Premium Glassmorphism</span>
+                                    <span class="hidden sm:block text-xs text-gray-500">7 Themes + Dark Variants</span>
+                                </div>
+                            </div>
+                            <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-gray-500 line-through">20+ hours</span>
+                            </div>
+                            <div class="col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-white font-bold">✅ Included</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="grid grid-cols-12 p-5 hover:bg-white/5 transition-all duration-300 group">
+                            <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="globe" class="w-5 h-5 text-green-400"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-white">Multi-Language + RTL</span>
+                                    <span class="hidden sm:block text-xs text-gray-500">7 Languages, Arabic
+                                        support</span>
+                                </div>
+                            </div>
+                            <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-gray-500 line-through">15+ hours</span>
+                            </div>
+                            <div class="col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-white font-bold">✅ Included</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 4 -->
+                        <div class="grid grid-cols-12 p-5 hover:bg-white/5 transition-all duration-300 group">
+                            <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="wand-2" class="w-5 h-5 text-pink-400"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-white">7 Animated Backgrounds</span>
+                                    <span class="hidden sm:block text-xs text-gray-500">Particles, Nebula, Grid,
+                                        etc.</span>
+                                </div>
+                            </div>
+                            <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-gray-500 line-through">25+ hours</span>
+                            </div>
+                            <div class="col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-white font-bold">✅ Included</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="grid grid-cols-12 p-5 hover:bg-white/5 transition-all duration-300 group">
+                            <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="plug" class="w-5 h-5 text-orange-400"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-white">Backend Integration</span>
+                                    <span class="hidden sm:block text-xs text-gray-500">Firebase, Supabase, REST
+                                        API</span>
+                                </div>
+                            </div>
+                            <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-gray-500 line-through">20+ hours</span>
+                            </div>
+                            <div class="col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-white font-bold">✅ Included</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="grid grid-cols-12 p-5 hover:bg-white/5 transition-all duration-300 group">
+                            <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="users" class="w-5 h-5 text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-white">Social Login</span>
+                                    <span class="hidden sm:block text-xs text-gray-500">Google, Apple, Facebook</span>
+                                </div>
+                            </div>
+                            <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-gray-500 line-through">15+ hours</span>
+                            </div>
+                            <div class="col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-white font-bold">✅ Included</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="grid grid-cols-12 p-5 hover:bg-white/5 transition-all duration-300 group">
+                            <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-yellow-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="book-open" class="w-5 h-5 text-yellow-400"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-white">2000+ Lines Docs</span>
+                                    <span class="hidden sm:block text-xs text-gray-500">Setup guides, API docs</span>
+                                </div>
+                            </div>
+                            <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-gray-500 line-through">30+ hours</span>
+                            </div>
+                            <div class="col-span-3 text-center flex flex-col justify-center">
+                                <span class="text-white font-bold">✅ Included</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Footer -->
+                    <div
+                        class="grid grid-cols-12 p-6 bg-gradient-to-r from-green-500/20 via-green-500/10 to-transparent border-t border-green-500/20">
+                        <div class="col-span-5 sm:col-span-6 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-green-500/30 flex items-center justify-center">
+                                <i data-lucide="clock" class="w-5 h-5 text-green-400"></i>
+                            </div>
+                            <span class="font-display font-bold text-lg text-white">Total You Save</span>
+                        </div>
+                        <div class="col-span-4 sm:col-span-3 text-center flex flex-col justify-center">
+                            <span class="text-gray-400 text-sm">Without OnFiNtY</span>
+                            <span class="text-gray-500 font-bold">165+ hours</span>
+                        </div>
+                        <div class="col-span-3 text-center flex flex-col justify-center">
+                            <span class="text-green-400 text-sm">With OnFiNtY</span>
+                            <span class="text-green-400 font-bold text-xl">~10 mins</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
-                <img src="screenshots/nature.webp"
-                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
-                <div class="absolute bottom-8 left-8 z-20">
-                    <span class="text-xs font-bold uppercase tracking-wider text-green-400 mb-2 block">Nature</span>
-                    <h4 class="text-2xl font-display font-bold">Forest Green</h4>
-                </div>
-            </div>
-
-            <div
-                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
-                <img src="screenshots/sunset.webp"
-                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
-                <div class="absolute bottom-8 left-8 z-20">
-                    <span class="text-xs font-bold uppercase tracking-wider text-orange-400 mb-2 block">Sunset</span>
-                    <h4 class="text-2xl font-display font-bold">Warm Glow</h4>
-                </div>
-            </div>
-
-            <div
-                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
-                <img src="screenshots/royal.webp"
-                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
-                <div class="absolute bottom-8 left-8 z-20">
-                    <span class="text-xs font-bold uppercase tracking-wider text-yellow-400 mb-2 block">Royal</span>
-                    <h4 class="text-2xl font-display font-bold">Black Gold</h4>
-                </div>
-            </div>
-
-            <div
-                class="snap-center shrink-0 w-[300px] md:w-[350px] relative group hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 rounded-3xl"></div>
-                <img src="screenshots/midnight.png"
-                    class="w-full h-[600px] object-cover rounded-3xl shadow-2xl border border-white/5" loading="lazy">
-                <div class="absolute bottom-8 left-8 z-20">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-2 block">Midnight</span>
-                    <h4 class="text-2xl font-display font-bold">Dark Mystery</h4>
-                </div>
-            </div>
+            <!-- Bottom Quote -->
+            <p class="text-center text-gray-400 mt-8 text-lg fade-up">
+                That's <strong class="text-white">4+ weeks</strong> of full-time development condensed into a coffee
+                break. ☕
+            </p>
         </div>
     </section>
 
-    <!-- Comparison Table -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto">
+    <!-- How to Add Section -->
+
+
+
+
+    <!-- Comprehensive Integration Guide -->
+    <section id="setup" class="py-24 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16">
-                <h2 class="font-display text-4xl font-bold mb-4">Why OnFiNtY?</h2>
-                <p class="text-gray-400 text-lg">Stop reinventing the wheel. Ship faster.</p>
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                    <i data-lucide="code-2" class="w-4 h-4"></i>
+                    <span>Developer First Integration</span>
+                </div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6">Setup in <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">3
+                        Simple Steps</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    From "flutter create" to production-ready authentication in minutes.
+                    Full guides available for <a class="text-blue-400 hover:text-blue-300 underline">Routing</a>,
+                    <a class="text-blue-400 hover:text-blue-300 underline">Backends</a>, and more.
+                </p>
             </div>
 
-            <div class="overflow-x-auto rounded-3xl border border-white/10">
-                <table class="w-full text-left bg-black/50 backdrop-blur-md min-w-[600px]">
-                    <thead>
-                        <tr class="border-b border-white/10">
-                            <th class="p-6 font-display text-lg">Feature</th>
-                            <th class="p-6 font-display text-lg text-purple-400">OnFiNtY</th>
-                            <th class="p-6 font-display text-lg text-gray-500">Basic Kits / DIY</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-white/5">
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Design Quality</td>
-                            <td class="p-6 text-white">💎 Premium Glassmorphism</td>
-                            <td class="p-6 text-gray-500">Basic / Flat</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Complete Screens</td>
-                            <td class="p-6 text-white">✅ 8 Screens</td>
-                            <td class="p-6 text-gray-500">2-3 Screens</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Themes</td>
-                            <td class="p-6 text-white">🎨 7 Ready Themes</td>
-                            <td class="p-6 text-gray-500">1 Default</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Multi-Language</td>
-                            <td class="p-6 text-white">🌍 7 Languages (+ Easy to Add)</td>
-                            <td class="p-6 text-gray-500">English Only</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Backend Support</td>
-                            <td class="p-6 text-white">🔌 Any Backend (Pluggable)</td>
-                            <td class="p-6 text-gray-500">Locked to One</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Documentation</td>
-                            <td class="p-6 text-white">📚 2000+ Lines</td>
-                            <td class="p-6 text-gray-500">Minimal README</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Avatar Upload</td>
-                            <td class="p-6 text-white">✅ Built-in</td>
-                            <td class="p-6 text-gray-500">❌ Not Included</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Session Persistence</td>
-                            <td class="p-6 text-white">✅ AuthWrapper</td>
-                            <td class="p-6 text-gray-500">❌ DIY</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6 font-medium">Time Saved</td>
-                            <td class="p-6 text-white font-bold">⏱️ 40+ Hours</td>
-                            <td class="p-6 text-gray-500">0 Hours</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Left: Explanation Steps -->
+                <div class="space-y-8">
+                    <!-- Step 1 -->
+                    <div class="group p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-blue-500/30 transition-all cursor-pointer"
+                        onclick="switchSetupTab(0)">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg shrink-0 mt-1 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                                1</div>
+                            <div>
+                                <h3
+                                    class="font-bold text-xl mb-2 text-white group-hover:text-blue-300 transition-colors">
+                                    Add Dependencies</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mb-3">Add the core packages to
+                                    your `pubspec.yaml`. We rely on community favorites like `flutter_animate`
+                                    and `go_router`.</p>
+                                <div
+                                    class="inline-flex items-center gap-2 text-xs font-mono text-blue-400 bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/20">
+                                    <span>flutter pub get</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="group p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-purple-500/30 transition-all cursor-pointer"
+                        onclick="switchSetupTab(1)">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-lg shrink-0 mt-1 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                                2</div>
+                            <div>
+                                <h3
+                                    class="font-bold text-xl mb-2 text-white group-hover:text-purple-300 transition-colors">
+                                    Wrap Your Router</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mb-3">Wrap your routes with
+                                    `AuthWrapper`. It handles session persistence, redirects, and loading states
+                                    automatically.</p>
+                                <div class="flex gap-2">
+                                    <span class="text-xs bg-white/10 px-2 py-1 rounded text-gray-300">GoRouter</span>
+                                    <span class="text-xs bg-white/10 px-2 py-1 rounded text-gray-300">Navigator
+                                        2.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="group p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-pink-500/30 transition-all cursor-pointer"
+                        onclick="switchSetupTab(2)">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 font-bold text-lg shrink-0 mt-1 shadow-[0_0_15px_rgba(236,72,153,0.2)]">
+                                3</div>
+                            <div>
+                                <h3
+                                    class="font-bold text-xl mb-2 text-white group-hover:text-pink-300 transition-colors">
+                                    Configure Backend</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mb-3">One line to switch
+                                    backends. Use the built-in mocks for UI dev, then swap to Firebase or
+                                    Supabase.</p>
+                                <div
+                                    class="inline-flex items-center gap-2 text-xs font-mono text-pink-400 bg-pink-500/10 px-3 py-1.5 rounded-lg border border-pink-500/20">
+                                    <span>AuthService.instance.configure(...)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Code Window -->
+                <div class="relative group">
+                    <!-- Glow Effect -->
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000">
+                    </div>
+
+                    <div
+                        class="relative bg-[#0d1117] border border-white/10 rounded-2xl overflow-hidden min-h-[500px] flex flex-col shadow-2xl">
+                        <!-- Window Controls -->
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/5">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                            </div>
+                            <div class="text-xs font-mono text-gray-500" id="code-filename">pubspec.yaml</div>
+                            <div class="w-12"></div> <!-- Spacer -->
+                        </div>
+
+                        <!-- Code Content Tabs (Hidden/Shown via JS) -->
+                        <div class="relative flex-1 bg-[#0d1117] overflow-hidden">
+                            <!-- Tab 0: Dependencies -->
+                            <pre id="setup-code-0"
+                                class="setup-code-block block p-6 m-0 overflow-auto font-mono text-sm leading-relaxed h-full text-gray-300 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent"><code><span class="text-pink-400">dependencies:</span>
+  <span class="text-blue-300">flutter:</span>
+    <span class="text-green-300">sdk:</span> <span class="text-orange-300">flutter</span>
+
+  <span class="text-gray-500"># Required for Localization</span>
+  <span class="text-blue-300">flutter_localizations:</span>
+    <span class="text-green-300">sdk:</span> <span class="text-orange-300">flutter</span>
+
+  <span class="text-gray-500"># Core UI & Animations</span>
+  <span class="text-blue-300">flutter_screenutil:</span> <span class="text-orange-300">^5.9.0</span>
+  <span class="text-blue-300">flutter_animate:</span> <span class="text-orange-300">^4.5.0</span>
+  <span class="text-blue-300">google_fonts:</span> <span class="text-orange-300">^6.1.0</span>
+  <span class="text-blue-300">lucide_icons:</span> <span class="text-orange-300">^0.257.0</span>
+
+  <span class="text-gray-500"># Navigation</span>
+  <span class="text-blue-300">go_router:</span> <span class="text-orange-300">^13.2.0</span>
+
+  <span class="text-gray-500"># Auth Essentials</span>
+  <span class="text-blue-300">image_picker:</span> <span class="text-orange-300">^1.2.1</span>  <span class="text-gray-500"># For avatars</span>
+  <span class="text-blue-300">intl:</span> <span class="text-orange-300">^0.20.2</span>          <span class="text-gray-500"># Localization</span></code></pre>
+
+                            <!-- Tab 1: Router -->
+                            <pre id="setup-code-1"
+                                class="setup-code-block hidden p-6 m-0 overflow-auto font-mono text-sm leading-relaxed h-full text-gray-300 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent"><code><span class="text-purple-400">final</span> _router = <span class="text-yellow-300">GoRouter</span>(
+  initialLocation: <span class="text-green-300">'/'</span>,
+  routes: [
+    <span class="text-gray-500">// 1. Wrap your app to handle sessions</span>
+    <span class="text-yellow-300">GoRoute</span>(
+      path: <span class="text-green-300">'/'</span>,
+      builder: (context, state) => <span class="text-blue-400">AuthWrapper</span>(
+        <span class="text-gray-500">// Where to go if logged in?</span>
+        home: <span class="text-purple-400">const</span> <span class="text-yellow-300">HomePage</span>(),
+      ),
+    ),
+
+    <span class="text-gray-500">// 2. Add Kit Routes (Spread Operator)</span>
+    ...<span class="text-blue-400">getAuthRoutes</span>(),
+    
+    <span class="text-gray-500">// 3. Your App Routes</span>
+    <span class="text-yellow-300">GoRoute</span>(
+      path: <span class="text-green-300">'/home'</span>,
+      builder: (_, __) => <span class="text-purple-400">const</span> <span class="text-yellow-300">HomePage</span>(),
+    ),
+  ],
+);</code></pre>
+
+                            <!-- Tab 2: Backend -->
+                            <pre id="setup-code-2"
+                                class="setup-code-block hidden p-6 m-0 overflow-auto font-mono text-sm leading-relaxed h-full text-gray-300 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent"><code><span class="text-purple-400">void</span> <span class="text-blue-400">main</span>() <span class="text-purple-400">async</span> {
+  <span class="text-yellow-300">WidgetsFlutterBinding</span>.<span class="text-blue-400">ensureInitialized</span>();
+
+  <span class="text-gray-500">// OPTION A: Testing? Use Mocks.</span>
+  <span class="text-yellow-300">AuthService</span>.instance.<span class="text-blue-400">configure</span>(
+    <span class="text-yellow-300">MockAuthImplementation</span>()
+  );
+
+  <span class="text-gray-500">// OPTION B: Production? Use Firebase!</span>
+  <span class="text-gray-500">// await Firebase.initializeApp(...);</span>
+  <span class="text-gray-500">// AuthService.instance.configure(</span>
+  <span class="text-gray-500">//   FirebaseAuthImplementation()</span>
+  <span class="text-gray-500">// );</span>
+
+  <span class="text-blue-400">runApp</span>(<span class="text-purple-400">const</span> <span class="text-yellow-300">MyApp</span>());
+}</code></pre>
+                        </div>
+
+                        <!-- Copy Button / Footer -->
+                        <div class="p-4 border-t border-white/5 bg-white/5 flex justify-end">
+                            <button onclick="copyCodeSnippet()"
+                                class="text-xs text-gray-400 hover:text-white flex items-center gap-2 transition-colors">
+                                <i data-lucide="copy" class="w-3 h-3"></i> <span id="copy-btn-text">Copy Snippet</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section id="pricing" class="py-32 px-6 text-center">
-        <div class="max-w-4xl mx-auto relative group">
-            <div
-                class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-1000">
+    <!-- Complete Configuration Options -->
+    <section class="py-24 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">Complete Configuration</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Every option in <code
+                        class="px-2 py-1 bg-white/10 rounded text-sm">auth_config.dart</code></p>
             </div>
 
-            <h2 class="relative text-5xl lg:text-7xl font-bold mb-8 font-display">
-                Ready to Ship?
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. General & Theme -->
+                <div class="glass-card p-6 rounded-2xl border border-purple-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="palette" class="w-6 h-6 text-purple-400"></i>
+                        <h3 class="font-bold text-lg">Theme Configuration</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            appName - Your app's name</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            defaultLocale - 7 languages available</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            themeType - 14 themes (7 light + 7 dark)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            backgroundStyle - 7 animated backgrounds</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            backgroundQuality - High/Medium/Low/Off</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Layout -->
+                <div class="glass-card p-6 rounded-2xl border border-blue-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="layout-grid" class="w-6 h-6 text-blue-400"></i>
+                        <h3 class="font-bold text-lg">Layout Configuration</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            welcomeLayoutStyle - 7 layouts</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            loginLayoutStyle - 7 layouts</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            registerLayoutStyle - 7 layouts</li>
+                    </ul>
+                    <div class="mt-3 text-xs text-gray-500">Classic, Hero, Split, Minimal, Card, Illustration,
+                        BottomCTA, and more!</div>
+                </div>
+
+                <!-- 3. Logo -->
+                <div class="glass-card p-6 rounded-2xl border border-pink-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="image" class="w-6 h-6 text-pink-400"></i>
+                        <h3 class="font-bold text-lg">Logo Configuration</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            logoPath - Custom logo asset</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            logoAlignment - 6 presets</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            logoSize - Custom sizing</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            logoPadding - Custom spacing</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            Per-screen logo sizes</li>
+                    </ul>
+                </div>
+
+                <!-- 4. Social Login -->
+                <div class="glass-card p-6 rounded-2xl border border-red-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="share-2" class="w-6 h-6 text-red-400"></i>
+                        <h3 class="font-bold text-lg">Social Login</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            enableGoogleSignIn</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            enableFacebookSignIn</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            enableAppleSignIn</li>
+                    </ul>
+                    <div class="mt-3 text-xs text-gray-500">Full implementations included in backend examples!
+                    </div>
+                </div>
+
+                <!-- 5. Validation & Security -->
+                <div class="glass-card p-6 rounded-2xl border border-yellow-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-yellow-400"></i>
+                        <h3 class="font-bold text-lg">Validation & Security</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            enableRealTimeValidation</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            passwordStrength - Weak/Medium/Strong/Custom</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            customPasswordRules</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            emailValidationMode</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            useOtpPage / otpSlotCount</li>
+                    </ul>
+                </div>
+
+                <!-- 6. Routing -->
+                <div class="glass-card p-6 rounded-2xl border border-green-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="route" class="w-6 h-6 text-green-400"></i>
+                        <h3 class="font-bold text-lg">Routing Configuration</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            All route paths customizable</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            successRoute - Where to go after login</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            successScreenAutoNavSeconds</li>
+                    </ul>
+                    <div class="mt-3 text-xs text-gray-500">Works with Go Router out of the box!</div>
+                </div>
+
+                <!-- 7. Accessibility -->
+                <div class="glass-card p-6 rounded-2xl border border-cyan-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="accessibility" class="w-6 h-6 text-cyan-400"></i>
+                        <h3 class="font-bold text-lg">Accessibility</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            accessibilityMode</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            minTouchTargetSize (WCAG 48dp)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            highContrastMode</li>
+                    </ul>
+                    <div class="mt-3 text-xs text-gray-500">WCAG compliant semantic labels included!</div>
+                </div>
+
+                <!-- 8. Custom Messages -->
+                <div class="glass-card p-6 rounded-2xl border border-orange-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="type" class="w-6 h-6 text-orange-400"></i>
+                        <h3 class="font-bold text-lg">Custom Messages</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            customWelcomeTitle</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            customWelcomeSubtitle</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            customLoginSubtitle</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            customRegisterSubtitle</li>
+                    </ul>
+                    <div class="mt-3 text-xs text-gray-500">Multi-language map-based customization!</div>
+                </div>
+
+                <!-- 9. Backend -->
+                <div class="glass-card p-6 rounded-2xl border border-indigo-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="plug" class="w-6 h-6 text-indigo-400"></i>
+                        <h3 class="font-bold text-lg">Backend Integration</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            Firebase - Full example</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            Supabase - Full example</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            REST API - Template</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            Mock - Testing mode</li>
+                    </ul>
+                    <div class="mt-3 text-xs text-gray-500">Swap backends without touching UI code!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What the Kit Includes -->
+    <section class="py-24 px-4 sm:px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">What's Inside the Kit</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Complete file structure - nothing hidden</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- File Structure -->
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+                        <i data-lucide="folder-tree" class="w-6 h-6 text-purple-400"></i>
+                        Kit Structure
+                    </h3>
+                    <div class="bg-black/50 rounded-xl p-4 overflow-x-auto">
+                        <pre class="text-sm text-gray-300"><code>onfinty_auth/
+├── auth_config.dart          <span class="text-purple-400"># Your customization hub</span>
+├── core/
+│   ├── theme/               <span class="text-blue-400"># Theme system (14 themes)</span>
+│   ├── router/              <span class="text-green-400"># Go Router integration</span>
+│   ├── utils/               <span class="text-yellow-400"># Validators, helpers</span>
+│   └── l10n/                <span class="text-cyan-400"># 7 language translations</span>
+├── backend/
+│   ├── auth_interface.dart   <span class="text-pink-400"># Backend contract</span>
+│   ├── auth_service.dart     <span class="text-pink-400"># Singleton service</span>
+│   ├── social_login_helper.dart
+│   └── auth_backend_examples.dart  <span class="text-orange-400"># Firebase, Supabase, Mock</span>
+├── models/
+│   └── user_entity.dart      <span class="text-gray-400"># User data model</span>
+├── screens/                  <span class="text-red-400"># 8 complete screens</span>
+│   ├── auth_welcome_screen.dart
+│   ├── auth_login_screen.dart
+│   ├── auth_register_screen.dart
+│   ├── auth_forgot_password_screen.dart
+│   ├── auth_otp_verification_screen.dart
+│   ├── auth_reset_password_screen.dart
+│   ├── auth_success_screen.dart
+│   └── auth_error_screen.dart
+└── widgets/                  <span class="text-indigo-400"># Reusable components</span>
+    ├── auth_button.dart
+    ├── auth_text_field.dart
+    ├── auth_glass_card.dart
+    ├── auth_logo.dart
+    ├── auth_header.dart
+    ├── auth_social_row.dart
+    ├── auth_error_dialog.dart
+    └── auth_professional_background.dart</code></pre>
+                    </div>
+                </div>
+
+                <!-- Documentation -->
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+                            <i data-lucide="book-open" class="w-6 h-6 text-blue-400"></i>
+                            Documentation Files
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 p-3 bg-black/30 rounded-xl">
+                                <i data-lucide="file-text" class="w-5 h-5 text-purple-400 mt-0.5"></i>
+                                <div>
+                                    <span class="font-medium">README.md</span>
+                                    <p class="text-sm text-gray-400">Overview, features, quick start</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 p-3 bg-black/30 rounded-xl">
+                                <i data-lucide="file-text" class="w-5 h-5 text-blue-400 mt-0.5"></i>
+                                <div>
+                                    <span class="font-medium">CLIENT_GUIDE.md</span>
+                                    <p class="text-sm text-gray-400">Complete customization guide (1000+ lines)
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 p-3 bg-black/30 rounded-xl">
+                                <i data-lucide="file-text" class="w-5 h-5 text-green-400 mt-0.5"></i>
+                                <div>
+                                    <span class="font-medium">BACKEND_INTEGRATION.md</span>
+                                    <p class="text-sm text-gray-400">Firebase, Supabase, REST API examples</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 p-3 bg-black/30 rounded-xl">
+                                <i data-lucide="file-text" class="w-5 h-5 text-yellow-400 mt-0.5"></i>
+                                <div>
+                                    <span class="font-medium">QUICK_START.md</span>
+                                    <p class="text-sm text-gray-400">Get running in 5 minutes</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 p-3 bg-black/30 rounded-xl">
+                                <i data-lucide="file-text" class="w-5 h-5 text-pink-400 mt-0.5"></i>
+                                <div>
+                                    <span class="font-medium">ROUTER_GUIDE.md</span>
+                                    <p class="text-sm text-gray-400">Go Router integration details</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 p-3 bg-black/30 rounded-xl">
+                                <i data-lucide="file-text" class="w-5 h-5 text-cyan-400 mt-0.5"></i>
+                                <div>
+                                    <span class="font-medium">CHANGELOG.md</span>
+                                    <p class="text-sm text-gray-400">Version history & updates</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-green-500/20">
+                        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+                            <i data-lucide="shield" class="w-6 h-6 text-green-400"></i>
+                            License
+                        </h3>
+                        <p class="text-gray-400 mb-4">This kit is licensed under the <strong class="text-white">MIT
+                                License</strong>:</p>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-green-400"></i> Use in personal projects</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-green-400"></i> Use in commercial projects</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-green-400"></i> Modify and customize freely</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-green-400"></i> Unlimited projects per purchase</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-white/10">
+                            The MIT license applies to individual source files. The product as a bundled
+                            commercial kit
+                            is protected by these terms.
+                            Distribution of the full kit as a competing product is restricted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Who is this for? - Premium Design -->
+    <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background Glow -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-12 fade-up">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">Built For <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">You</span>
+                </h2>
+                <p class="text-gray-400 text-lg">Whether you're shipping solo or scaling a team</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+                <!-- Indie Hackers -->
+                <div
+                    class="group relative p-8 rounded-3xl bg-gradient-to-br from-purple-500/10 via-purple-500/5 to-transparent border border-purple-500/20 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2">
+                    <div
+                        class="absolute inset-0 bg-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-purple-500/30 to-purple-600/20 flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
+                            <i data-lucide="rocket" class="w-7 h-7 text-purple-400"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2">Indie Hackers</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Ship 10x faster. Focus on your product while we
+                            handle the auth UI.</p>
+                    </div>
+                </div>
+
+                <!-- Agencies -->
+                <div
+                    class="group relative p-8 rounded-3xl bg-gradient-to-br from-pink-500/10 via-pink-500/5 to-transparent border border-pink-500/20 hover:border-pink-500/50 transition-all duration-500 hover:-translate-y-2">
+                    <div
+                        class="absolute inset-0 bg-pink-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-pink-500/30 to-pink-600/20 flex items-center justify-center shadow-lg shadow-pink-500/20 group-hover:scale-110 transition-transform">
+                            <i data-lucide="building-2" class="w-7 h-7 text-pink-400"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2">Agencies</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Maximize margins. Premium UI at a fraction of
+                            dev time.</p>
+                    </div>
+                </div>
+
+                <!-- Startups -->
+                <div
+                    class="group relative p-8 rounded-3xl bg-gradient-to-br from-blue-500/10 via-blue-500/5 to-transparent border border-blue-500/20 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2">
+                    <div
+                        class="absolute inset-0 bg-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-blue-500/30 to-blue-600/20 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+                            <i data-lucide="trending-up" class="w-7 h-7 text-blue-400"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2">Startups</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">MVP in days, not weeks. Impress investors
+                            instantly.</p>
+                    </div>
+                </div>
+
+                <!-- Students -->
+                <div
+                    class="group relative p-8 rounded-3xl bg-gradient-to-br from-green-500/10 via-green-500/5 to-transparent border border-green-500/20 hover:border-green-500/50 transition-all duration-500 hover:-translate-y-2">
+                    <div
+                        class="absolute inset-0 bg-green-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-green-500/30 to-green-600/20 flex items-center justify-center shadow-lg shadow-green-500/20 group-hover:scale-110 transition-transform">
+                            <i data-lucide="graduation-cap" class="w-7 h-7 text-green-400"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2">Students</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Learn pro patterns. Study production-grade
+                            Flutter code.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 fade-up">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-gray-400 text-lg">One-time purchase. Lifetime access. No subscriptions.</p>
+            </div>
+
+            <!-- Pricing Card -->
+            <div class="relative max-w-lg mx-auto scale-in">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 blur-3xl rounded-full opacity-50">
+                </div>
+                <div class="relative glass rounded-3xl p-8 border border-purple-500/30">
+                    <div class="text-center mb-8">
+                        <span
+                            class="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-sm font-bold mb-4">🚀
+                            LIFETIME ACCESS</span>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <span class="text-6xl font-bold font-display">$77</span>
+                        </div>
+                        <p class="text-gray-400">one-time payment</p>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>All 8 complete screens</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>All 7 premium themes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>All 7 animated backgrounds</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>All 21 layout varieties</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>All 7 languages (incl. RTL Arabic)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>Backend examples (Firebase, Supabase, REST)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>2000+ lines of documentation</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>Future updates included</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400 shrink-0"></i>
+                            <span>MIT License - unlimited projects</span>
+                        </div>
+                    </div>
+
+                    <button
+                        class="w-full py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(168,85,247,0.4)] flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                        Get Instant Access
+                    </button>
+
+                    <p class="text-center text-sm text-gray-500 mt-4">
+                        💳 Secure payment via Payhip (PayPal/Card)
+                    </p>
+                </div>
+
+                <!-- Money-back guarantee -->
+                <div class="text-center mt-6 p-4 glass rounded-xl border border-green-500/20">
+                    <div class="flex items-center justify-center gap-2 text-green-400 mb-1">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        <span class="font-bold">Fair-use Refund Policy</span>
+                    </div>
+                    <p class="text-sm text-gray-500">See Terms of Service for details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="py-24 px-4 sm:px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4">What You Get Instantly</h2>
+                <p class="text-gray-400 text-lg">After purchase, you'll receive immediate access to:</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="folder-code" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Complete Source Code</h4>
+                    <p class="text-xs text-gray-400">All Dart files, ready to copy into your project</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="book-open" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">CLIENT_GUIDE.md</h4>
+                    <p class="text-xs text-gray-400">Step-by-step integration for any scenario</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="plug" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">BACKEND_INTEGRATION.md</h4>
+                    <p class="text-xs text-gray-400">Firebase, Supabase, and REST API examples</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="history" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">CHANGELOG.md</h4>
+                    <p class="text-xs text-gray-400">Full version history and updates</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="palette" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">All 7 Themes</h4>
+                    <p class="text-xs text-gray-400">Cosmic, Ocean, Nature, Sunset, Royal, Midnight, Minimal</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">All 7 Backgrounds</h4>
+                    <p class="text-xs text-gray-400">Mesh, Orbs, Geometric, Galactic, Particles, Nebula, Grid
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="globe" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">All 7 Languages</h4>
+                    <p class="text-xs text-gray-400">Including RTL Arabic support</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="w-14 h-14 mx-auto mb-4 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layout-grid" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">All 21 Layouts</h4>
+                    <p class="text-xs text-gray-400">7 Welcome + 7 Login + 7 Register varieties</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section id="gallery" class="py-24 px-4 sm:px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-4xl sm:text-5xl font-bold mb-4">
+                    Explore the <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Collection</span>
+                </h2>
+                <p class="text-gray-400">Filter by category to see the power of OnFiNtY Auth. <span id="gallery-counter"
+                        class="text-white font-bold">0</span> images available.</p>
+            </div>
+
+            <!-- Tab Filter -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button
+                    class="gallery-tab active px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-black"
+                    data-filter="all">All</button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-sm font-medium transition-all glass hover:bg-white/20"
+                    data-filter="welcome">Welcome</button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-sm font-medium transition-all glass hover:bg-white/20"
+                    data-filter="login">Login</button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-sm font-medium transition-all glass hover:bg-white/20"
+                    data-filter="register">Register</button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-sm font-medium transition-all glass hover:bg-white/20"
+                    data-filter="themes">Themes</button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-sm font-medium transition-all glass hover:bg-white/20"
+                    data-filter="rtl">Arabic/RTL</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                <!-- Javascript will inject images here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox"
+        class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden opacity-0 transition-opacity duration-300 flex items-center justify-center">
+        <!-- Close Button -->
+        <button id="lightbox-close"
+            class="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-50">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+
+        <!-- Nav Buttons -->
+        <button id="lightbox-prev"
+            class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors hidden sm:block z-50">
+            <i data-lucide="chevron-left" class="w-8 h-8"></i>
+        </button>
+        <button id="lightbox-next"
+            class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors hidden sm:block z-50">
+            <i data-lucide="chevron-right" class="w-8 h-8"></i>
+        </button>
+
+        <!-- Main Image Container -->
+        <div class="relative w-full h-full p-4 sm:p-12 flex items-center justify-center">
+            <img id="lightbox-img" src="" alt="Gallery Preview"
+                class="max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-transform duration-300">
+
+            <!-- Caption -->
+            <div class="absolute bottom-8 left-0 right-0 text-center pointer-events-none">
+                <p id="lightbox-caption"
+                    class="text-lg font-medium text-white/90 bg-black/50 inline-block px-4 py-2 rounded-full backdrop-blur-md">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-4 sm:px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-4">
+                    <i data-lucide="users" class="w-4 h-4 text-purple-400"></i>
+                    <span class="text-sm text-gray-300">Trusted by real-world projects</span>
+                </div>
+                <p class="text-gray-400">Everything you need to know about the product and billing.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="glass rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                    <h3 class="font-bold text-lg mb-2 text-white">Is this a one-time payment?</h3>
+                    <p class="text-gray-400">Yes! You pay $77 once and get lifetime access to the code, updates,
+                        and any
+                        new themes we add in the future.</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                    <h3 class="font-bold text-lg mb-2 text-white">Can I use this for client projects?</h3>
+                    <p class="text-gray-400">Absolutely. The license allows for unlimited personal and
+                        commercial
+                        projects. You cannot, however, resell the kit itself.</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                    <h3 class="font-bold text-lg mb-2 text-white">How do I change the theme?</h3>
+                    <p class="text-gray-400">It's literally one line of code in the `auth_config.dart` file.
+                        `theme:
+                        AuthTheme.cosmic`, `theme: AuthTheme.ocean`, etc.</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                    <h3 class="font-bold text-lg mb-2 text-white">Does it work with Supabase/Firebase?</h3>
+                    <p class="text-gray-400">Yes. We include full, production-ready implementation examples for
+                        both
+                        Firebase and Supabase. You can also hook it up to any REST API.</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                    <h3 class="font-bold text-lg mb-2 text-white">What happens after purchase?</h3>
+                    <p class="text-gray-400">You'll get an immediate download link for the full Flutter source
+                        code zip
+                        file. Unzip, run `flutter pub get`, and you're good to go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-32 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-pink-900/30 to-blue-900/50"></div>
+        <div
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent">
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="font-display text-5xl lg:text-7xl font-bold mb-6">
+                Ready to Build<br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">Beautiful
+                    Auth?</span>
             </h2>
-            <p class="relative text-xl text-gray-400 mb-4">
-                Get the complete source code, documentation, and lifetime updates.
+            <p class="text-xl text-gray-300 mb-4">
+                Stop wasting hours on authentication screens.<br>
+                Trusted by real-world projects who chose the smart way.
             </p>
-            <p class="relative text-sm text-gray-500 mb-10">
-                One-time payment. MIT License. Use in unlimited projects.
+            <p class="text-gray-500 mb-10">
+                117,649 combinations. 5 minutes to integrate. Lifetime access.
             </p>
 
-            <button
-                class="relative px-12 py-5 bg-white text-black rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.4)]">
-                Buy Now for $49
-            </button>
+            <a href="#pricing"
+                class="inline-flex items-center gap-2 px-12 py-5 bg-white text-black rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.4)]">
+                🚀 Get OnFiNtY Auth UI Kit - $77
+            </a>
 
-            <p class="relative mt-8 text-sm text-gray-600">Instant download • Lifetime updates • Email support</p>
+            <p class="mt-8 text-sm text-gray-500">
+                💳 Secure payment • ⚡ Instant access • 🛡️ Fair-use Refund Policy
+            </p>
         </div>
     </section>
+    <!-- STICKY CTA BAR - Appears after scrolling past hero -->
+    <div id="sticky-cta" class="sticky-cta">
+        <div
+            class="bg-gradient-to-r from-purple-900/95 via-black/95 to-pink-900/95 backdrop-blur-xl border-t border-white/10 py-3 px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+                <div class="hidden sm:flex items-center gap-3">
+                    <span
+                        class="font-display font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">OnFiNtY</span>
+                    <span class="text-gray-400 text-sm">117,649 combinations • Production ready</span>
+                </div>
+                <div class="flex items-center gap-4 w-full sm:w-auto justify-center sm:justify-end">
+                    <span class="text-2xl font-bold text-white">$77</span>
+                    <a href="#pricing"
+                        class="px-6 py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-lg flex items-center gap-2">
+                        <span>Get Access</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-gray-600 border-t border-white/5 px-6">
+    <footer class="py-16 border-t border-white/5 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-6">
-                <span class="font-display font-bold text-xl text-white">OnFiNtY</span>
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <span
+                        class="font-display font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 mb-4 block">OnFiNtY</span>
+                    <p class="text-gray-400 text-sm max-w-sm">The most customizable authentication UI kit for
+                        Flutter.
+                        117,649 unique combinations to make your app stand out.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#setup" class="hover:text-white transition-colors">Setup Guide</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold mb-4 text-white">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="TERMS_OF_SERVICE.html" class="hover:text-white transition-colors">Terms
+                                    of
+                                    Service</a></li>
+                            <li><a href="PRIVACY_POLICY.html" class="hover:text-white transition-colors">Privacy
+                                    Policy</a></li>
+                            <li><a href="LICENSE.html" class="hover:text-white transition-colors">MIT
+                                    License</a></li>
+                        </ul>
+                </div>
             </div>
-            <p class="text-sm mb-4">© 2026 OnFiNtY. All rights reserved. Made with 💜</p>
-            <div class="flex justify-center gap-6 text-sm">
-                <a href="#" class="hover:text-white transition-colors">Documentation</a>
-                <a href="#" class="hover:text-white transition-colors">MIT License</a>
-                <a href="mailto:onfinty@gmail.com" class="hover:text-white transition-colors">Support</a>
+
+            <!-- Bottom Bar -->
+            <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5">
+                <p class="text-sm text-gray-500 mb-4 md:mb-0">© 2026 OnFiNtY. Made with ❤️ for Flutter
+                    developers.</p>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:onfinty@gmail.com"
+                        class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - OnFiNtY Auth Kit</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS (CDN for standalone pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose h3 {
+            color: #e5e7eb;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose p {
+            color: #9ca3af;
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+        }
+
+        .prose ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose li {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .prose li::before {
+            content: "•";
+            color: #a855f7;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            color: #fff;
+            font-size: 0.875rem;
+        }
+
+        td {
+            padding: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #d1d5db;
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: #a855f7;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #d8b4fe;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen relative overflow-x-hidden">
+
+    <!-- Background Orbs -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="orb w-[500px] h-[500px] bg-purple-600/30 -top-20 -left-20"></div>
+        <div class="orb w-[400px] h-[400px] bg-blue-600/30 top-1/2 right-0"></div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="w-full border-b border-white/5 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="font-bold text-xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">OnFiNtY</a>
+            <a href="index.html" class="text-sm text-gray-400 hover:text-white transition-colors">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto py-20 px-6">
+        <div class="mb-12 text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 mb-6">
+                <i data-lucide="lock" class="w-6 h-6"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Privacy Policy</h1>
+            <p class="text-gray-400">Last Updated: January 2026</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 md:p-12 mb-12 prose">
+
+            <h2>Summary</h2>
+            <p>The <strong>OnFiNtY Auth UI Kit</strong> is a source code product. It does not collect, store, or
+                transmit any personal data itself. This privacy policy explains what data may be collected when you
+                purchase the product through our sales platform.</p>
+
+            <div class="p-6 bg-white/5 rounded-xl border border-white/10 my-8">
+                <h3 class="!mt-0 !text-white">1. What This Product Does NOT Collect</h3>
+                <p class="mb-2">The OnFiNtY Auth UI Kit source code itself:</p>
+                <ul class="space-y-2">
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Does not collect any personal data</li>
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Does not include analytics or tracking</li>
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Does not phone home or connect to external servers</li>
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Does not store user credentials (you implement that in
+                        your backend)</li>
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Does not use cookies</li>
+                </ul>
+                <p class="text-sm text-gray-500 mt-4">The kit is purely UI components that run locally in your Flutter
+                    application.</p>
+            </div>
+
+            <h2>2. Purchase Information</h2>
+            <p>When you purchase the kit through <strong>Payhip</strong>, the following information may be collected by
+                the payment platform:</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Collector</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>Payhip</td>
+                            <td>Order fulfillment</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>Payhip</td>
+                            <td>Delivery of purchase, receipts</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Details</td>
+                            <td>PayPal / Stripe (via Payhip)</td>
+                            <td>Payment processing</td>
+                        </tr>
+                        <tr>
+                            <td>Country</td>
+                            <td>Payhip</td>
+                            <td>Tax compliance</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>The creator does not directly store or process payment information.</strong> All payments are
+                handled by Payhip and its payment processors (PayPal/Stripe).</p>
+
+            <h2>3. How Your Information is Used</h2>
+            <p>Information collected during purchase is used to:</p>
+            <ul>
+                <li>Deliver the product to you (download link)</li>
+                <li>Send purchase receipts and order confirmation</li>
+                <li>Provide support if you contact us</li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+            <p>The following third-party services may process your data during purchase:</p>
+            <h3>Payhip</h3>
+            <p>Handles product sales and delivery. <a href="https://payhip.com/privacy" target="_blank">Privacy
+                    Policy</a></p>
+            <h3>PayPal</h3>
+            <p>Processes payments. <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank">Privacy
+                    Policy</a></p>
+            <h3>Stripe</h3>
+            <p>Processes card payments. <a href="https://stripe.com/privacy" target="_blank">Privacy Policy</a></p>
+
+            <h2>5. Data Retention</h2>
+            <ul>
+                <li><strong>Purchase records:</strong> Retained by Payhip for legal/tax purposes</li>
+                <li><strong>Support communications:</strong> Retained only as long as necessary to resolve your issue
+                </li>
+                <li><strong>The creator does not maintain a separate customer database</strong></li>
+            </ul>
+
+            <h2>6. Your Rights</h2>
+            <p>You have the right to request access, deletion (subject to legal retention laws), or opt-out of
+                marketing. You may also contact Payhip directly regarding data held by their platform.</p>
+
+            <h2>7. Apps Built With This Kit</h2>
+            <div class="p-4 border-l-4 border-yellow-500 bg-yellow-500/10">
+                <p class="!mb-0 text-yellow-200"><strong>Important:</strong> When you build applications using the
+                    OnFiNtY Auth UI Kit, your applications may collect user data. You are solely responsible for
+                    creating your own privacy policy and ensuring compliance with applicable laws (GDPR, CCPA) for your
+                    app's users.</p>
+            </div>
+
+            <h2>8. Contact</h2>
+            <p>For privacy-related questions:</p>
+            <p>📧 Email: <a href="mailto:onfinty@gmail.com">onfinty@gmail.com</a></p>
+
+            <hr class="border-white/10 my-10">
+            <p class="text-sm opacity-60">By purchasing the OnFiNtY Auth UI Kit, you acknowledge this Privacy Policy.
+            </p>
+
+        </div>
+
+        <div class="text-center text-sm text-gray-500">
+            © 2026 OnFiNtY. Made with ❤️ for Flutter developers.
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

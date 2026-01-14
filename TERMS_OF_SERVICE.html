@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - OnFiNtY Auth Kit</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS (CDN for standalone pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .prose h3 {
+            color: #e5e7eb;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose p {
+            color: #9ca3af;
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+        }
+
+        .prose ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose li {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .prose li::before {
+            content: "•";
+            color: #ec4899;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        a {
+            color: #ec4899;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #f472b6;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen relative overflow-x-hidden">
+
+    <!-- Background Orbs -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="orb w-[500px] h-[500px] bg-purple-600/30 -top-20 -left-20"></div>
+        <div class="orb w-[400px] h-[400px] bg-pink-600/30 top-1/2 right-0"></div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="w-full border-b border-white/5 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="font-bold text-xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">OnFiNtY</a>
+            <a href="index.html" class="text-sm text-gray-400 hover:text-white transition-colors">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto py-20 px-6">
+        <div class="mb-12 text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 mb-6">
+                <i data-lucide="file-text" class="w-6 h-6"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Terms of Service</h1>
+            <p class="text-gray-400">Last Updated: January 2026</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 md:p-12 mb-12 prose">
+
+            <h2>1. Product Definition</h2>
+            <p>The <strong>OnFiNtY Auth UI Kit</strong> is a digital product consisting of source code files for
+                building authentication user interfaces in Flutter applications. This is a one-time purchase product,
+                not a subscription service.</p>
+
+            <h2>2. License Grant</h2>
+            <p>Upon purchase, you are granted a perpetual, non-exclusive license to:</p>
+            <ul class="space-y-2">
+                <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="check"
+                        class="w-4 h-4 text-green-400"></i> Use the kit in <strong>unlimited personal projects</strong>
+                </li>
+                <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="check"
+                        class="w-4 h-4 text-green-400"></i> Use the kit in <strong>unlimited commercial
+                        projects</strong></li>
+                <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="check"
+                        class="w-4 h-4 text-green-400"></i> Modify and customize the source code</li>
+                <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="check"
+                        class="w-4 h-4 text-green-400"></i> Use the kit for client projects</li>
+            </ul>
+
+            <div class="p-6 bg-red-500/5 rounded-xl border border-red-500/20 my-8">
+                <h3 class="!mt-0 !text-red-200">What You Cannot Do</h3>
+                <ul class="!mb-0 space-y-2">
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> <strong>Resell or redistribute</strong> the kit as a
+                        standalone product</li>
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Share your license with others</li>
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Claim authorship of the original kit</li>
+                    <li class="!pl-0 !before:content-none flex items-center gap-2"><i data-lucide="x"
+                            class="w-4 h-4 text-red-400"></i> Use in templates for resale (e.g., ThemeForest)</li>
+                </ul>
+            </div>
+
+            <h2>3. Intellectual Property</h2>
+            <p>The OnFiNtY Auth UI Kit source code and documentation are the intellectual property of the creator. Your
+                purchase grants you a license to use the product, not ownership of the intellectual property itself.</p>
+
+            <h2>4. Disclaimer of Warranties</h2>
+            <p>THE PRODUCT IS PROVIDED <strong>"AS IS"</strong> WITHOUT WARRANTY OF ANY KIND.</p>
+            <p>The creator makes no warranties regarding merchantability, fitness for a particular purpose, or
+                error-free operation.</p>
+
+            <h2>5. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, the creator shall not be liable for direct, indirect, incidental,
+                or consequential damages. <strong>Total liability shall not exceed the purchase price of the
+                    product.</strong></p>
+
+            <h2>6. Refund Policy</h2>
+            <p>This is a <strong>digital product</strong> with immediate access upon purchase.</p>
+            <p><strong>Refunable for:</strong> Duplicate purchases or technical access failure.</p>
+            <p><strong>Non-refundable for:</strong> Change of mind, lack of technical knowledge, or failure to read
+                description.</p>
+
+            <h2>7. Support</h2>
+            <p>Support is provided on a best-effort basis for general questions and bug reports. It does not include
+                custom implementation or backend debugging.</p>
+
+            <h2>8. Contact</h2>
+            <p>📧 Email: <a href="mailto:onfinty@gmail.com">onfinty@gmail.com</a></p>
+
+            <hr class="border-white/10 my-10">
+            <p class="text-sm opacity-60">By purchasing and using the OnFiNtY Auth UI Kit, you agree to these Terms of
+                Service.</p>
+
+        </div>
+
+        <div class="text-center text-sm text-gray-500">
+            © 2026 OnFiNtY. Made with ❤️ for Flutter developers.
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
