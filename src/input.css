@@ -758,31 +758,38 @@
     }
 
     /* ===== COMPARISON TABLE (Why OnFiNtY section) ===== */
-    /* Make the table scrollable on mobile if needed */
+    /* Make the table wrapper scrollable horizontally */
     .scale-in>div {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
 
+    /* Table content needs minimum width to trigger horizontal scroll */
+    .scale-in>div>div {
+        min-width: 500px;
+    }
+
     /* Comparison table row adjustments */
     .grid.grid-cols-12 {
-        font-size: 0.7rem;
-        min-width: 0;
+        font-size: 0.75rem;
+        min-width: 500px;
         padding: 0.75rem 0.5rem;
+        flex-shrink: 0;
     }
 
     .grid.grid-cols-12 .col-span-5,
     .grid.grid-cols-12 .col-span-4,
     .grid.grid-cols-12 .col-span-3 {
-        font-size: 0.7rem;
-        word-break: break-word;
+        font-size: 0.75rem;
+        white-space: nowrap;
     }
 
-    /* Hide feature icons on very small screens to save space */
+    /* Keep feature icons visible */
     .grid.grid-cols-12 .w-10.h-10 {
         width: 28px;
         height: 28px;
         min-width: 28px;
+        flex-shrink: 0;
     }
 
     .grid.grid-cols-12 .w-10.h-10 i {
@@ -793,6 +800,7 @@
     /* Table header adjustments */
     .grid.grid-cols-12 .font-display {
         font-size: 0.75rem;
+        white-space: nowrap;
     }
 
     /* Hide detailed descriptions in table */
