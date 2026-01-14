@@ -494,25 +494,6 @@ document.addEventListener('DOMContentLoaded', () => {
         staggerElements.forEach(el => el.classList.add('visible'));
     }
 
-    // --- STICKY CTA BAR ---
-    const stickyCta = document.getElementById('sticky-cta');
-    const heroSection = document.getElementById('hero');
-
-    if (stickyCta && heroSection) {
-        const ctaObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    // Hero is out of view - show sticky CTA
-                    stickyCta.classList.add('visible');
-                } else {
-                    // Hero is in view - hide sticky CTA
-                    stickyCta.classList.remove('visible');
-                }
-            });
-        }, { threshold: 0 });
-
-        ctaObserver.observe(heroSection);
-    }
 
     // --- Legacy reveal support (backwards compatible) ---
     const revealElements = document.querySelectorAll('.reveal');

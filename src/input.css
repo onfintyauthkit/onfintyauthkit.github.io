@@ -632,3 +632,338 @@
         backdrop-filter: blur(6px);
     }
 }
+
+/* ===== COMPREHENSIVE MOBILE RESPONSIVENESS (720x1600 and similar) ===== */
+
+/* Target 720px width screens (common mobile resolution) */
+@media (max-width: 720px) {
+
+    /* Hero Section Fixes */
+    #hero {
+        min-height: 100svh;
+        /* Use small viewport height for mobile */
+        padding-top: 80px;
+    }
+
+    /* Hero text content */
+    #hero .font-display {
+        font-size: clamp(2.5rem, 10vw, 4rem) !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Hero paragraph */
+    #hero p.text-lg {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+
+    /* CTA Buttons on mobile */
+    #hero .flex-col.sm\\:flex-row {
+        gap: 0.75rem;
+    }
+
+    #hero .flex-col.sm\\:flex-row a {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Phone showcase container */
+    #phone-showcase {
+        transform: scale(0.9);
+        margin-top: -1rem;
+    }
+
+    /* Phone showcase height adjustment */
+    #phone-showcase>div {
+        height: 380px !important;
+    }
+
+    /* Center phone sizing */
+    #phone-center {
+        width: 200px !important;
+    }
+
+    /* Hero badges positioning for mobile */
+    #phone-showcase~div[class*="absolute"] {
+        transform: scale(0.85);
+    }
+
+    /* Navigation adjustments */
+    nav .nav-inner {
+        height: 64px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    nav .font-display {
+        font-size: 1.25rem;
+    }
+
+    /* Section padding */
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Section titles */
+    section h2.font-display {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+
+    /* Grid adjustments */
+    .grid.md\\:grid-cols-2,
+    .grid.md\\:grid-cols-4,
+    .grid.lg\\:grid-cols-3,
+    .grid.lg\\:grid-cols-4 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Cards and glass elements */
+    .glass-card,
+    .glass {
+        padding: 1rem;
+    }
+
+    /* Feature cards */
+    .glass-card p,
+    [class*="border-white/10"] p {
+        font-size: 0.875rem;
+    }
+
+    /* Code blocks */
+    pre {
+        font-size: 0.75rem;
+        padding: 1rem;
+    }
+
+    /* Table responsiveness */
+    .grid.grid-cols-12 {
+        font-size: 0.8rem;
+    }
+
+    .grid.grid-cols-12 .col-span-5 {
+        font-size: 0.85rem;
+    }
+
+    /* Stats section */
+    .flex.flex-wrap.justify-center.gap-6 {
+        gap: 1.5rem;
+    }
+
+    .text-4xl.lg\\:text-5xl {
+        font-size: 2rem;
+    }
+}
+
+/* ===== SCROLL INDICATOR ANIMATION FIX ===== */
+@keyframes smoothBounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-12px);
+        opacity: 1;
+    }
+}
+
+/* Enhanced scroll indicator */
+#hero .absolute.bottom-8 {
+    animation: smoothBounce 2s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+}
+
+#hero .absolute.bottom-8:hover {
+    animation-play-state: paused;
+    opacity: 1;
+}
+
+/* ===== HERO FLOATING BADGES MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+    /* Floating badges in hero - better positioning */
+    #phone-showcase .animate-float {
+        position: absolute;
+        z-index: 40;
+    }
+
+    /* Scale down all floating badges */
+    .animate-float.glass {
+        transform: scale(0.85);
+    }
+
+    /* Badge inner content */
+    .animate-float .flex.items-center.gap-2 {
+        gap: 0.375rem;
+    }
+
+    .animate-float .text-xl {
+        font-size: 1rem;
+    }
+
+    .animate-float .text-xs {
+        font-size: 0.65rem;
+    }
+
+    .animate-float .text-sm {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===== VERY SMALL SCREENS (360px and below) ===== */
+@media (max-width: 360px) {
+    #hero h1 {
+        font-size: 2rem !important;
+    }
+
+    #phone-showcase {
+        transform: scale(0.75);
+    }
+
+    #phone-showcase>div {
+        height: 320px !important;
+    }
+
+    /* Hide floating badges on very small screens */
+    .animate-float {
+        display: none;
+    }
+
+    nav .font-display {
+        font-size: 1.1rem;
+    }
+
+    /* Reduce button sizes */
+    #hero .flex-col.sm\\:flex-row a {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== MEDIUM MOBILE (400px - 640px) ===== */
+@media (min-width: 400px) and (max-width: 640px) {
+    #phone-showcase {
+        transform: scale(0.95);
+    }
+
+    #phone-showcase>div {
+        height: 420px !important;
+    }
+
+    /* Better badge visibility */
+    .animate-float {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* ===== TALL PHONES (aspect ratio based) ===== */
+@media (max-width: 720px) and (min-height: 1000px) {
+    #hero {
+        padding-bottom: 2rem;
+    }
+
+    #phone-showcase>div {
+        height: 450px !important;
+    }
+
+    #phone-center {
+        width: 240px !important;
+    }
+
+    /* More breathing room for content */
+    .grid.lg\\:grid-cols-2 {
+        gap: 2rem;
+    }
+}
+
+/* ===== LANDSCAPE MOBILE ===== */
+@media (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        min-height: auto;
+        padding: 100px 1rem 2rem;
+    }
+
+    #phone-showcase {
+        display: none;
+    }
+
+    #hero .grid.lg\\:grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .order-1.lg\\:order-2 {
+        display: none;
+    }
+}
+
+/* ===== GALLERY SECTION MOBILE ===== */
+@media (max-width: 640px) {
+
+    /* Gallery grid */
+    #gallery-grid {
+        columns: 2;
+        column-gap: 0.5rem;
+    }
+
+    #gallery-grid>div {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Gallery tabs */
+    .gallery-tab {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* ===== PRICING SECTION MOBILE ===== */
+@media (max-width: 640px) {
+
+    /* Pricing card */
+    [class*="from-purple-500/20"] {
+        padding: 1.5rem;
+    }
+
+    /* Price display */
+    .text-6xl,
+    .text-7xl {
+        font-size: 3rem;
+    }
+
+    /* Feature list in pricing */
+    .space-y-4>li {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ===== FOOTER MOBILE ===== */
+@media (max-width: 640px) {
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    footer .grid {
+        gap: 2rem;
+    }
+
+    footer .text-sm {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== SMOOTH SCROLLING FIX FOR IOS ===== */
+@supports (-webkit-touch-callout: none) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+}
